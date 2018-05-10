@@ -20,6 +20,7 @@ namespace EssentialToolsMVC.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
+            //a
         }
 
         public object GetService(Type serviceType)
