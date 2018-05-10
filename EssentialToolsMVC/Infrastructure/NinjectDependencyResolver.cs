@@ -20,7 +20,8 @@ namespace EssentialToolsMVC.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
-            //a
+            kernel.Bind<IDiscountHelper>().To<DefaultDiscountHelper>().WithPropertyValue("DiscountSize",50M);
+            //a1
         }
 
         public object GetService(Type serviceType)
